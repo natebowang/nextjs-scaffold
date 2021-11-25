@@ -14,11 +14,7 @@ export type Props = {
 }
 
 function areEqual(prevProps: Props, nextProps: Props) {
-  return (
-    prevProps.matrixElement === nextProps.matrixElement &&
-    prevProps.index.x === nextProps.index.x &&
-    prevProps.index.y === nextProps.index.y
-  )
+  return prevProps.matrixElement === nextProps.matrixElement
 }
 
 export default memo(function Square({ matrixElement, count, dispatch, index }: Props): JSX.Element {
