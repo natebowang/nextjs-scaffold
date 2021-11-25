@@ -1,0 +1,10 @@
+:root {
+  /* Palette */
+  --red: hsla(0, 100%, 55%, 1);
+  --sunshine: hsla(47, 98%, 51%, 1);
+  --offBlack: hsla(0, 0%, 10%, 1);
+
+  /* Alias */
+  --backgroundColor: transparent;
+  --foregroundColor: var(--offBlack);
+}

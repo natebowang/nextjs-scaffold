@@ -1,0 +1,44 @@
+.focusRing:focus {
+  box-shadow: inset 0 0 0 2px white;
+  transition: box-shadow 0.1s;
+}
+
+.common {
+  composes: focusRing;
+  align-items: center;
+  /* TODO: Use a react hook and resize observer API to measure the width, and set height equals to width
+      if we need more browser compatibility */
+  aspect-ratio: 1 / 1;
+  border: 1px solid var(--foregroundColor);
+  color: var(--foregroundColor);
+  display: flex;
+  flex: 1 0 0;
+  font-size: calc(10px + 5vw);
+  font-weight: 600;
+  justify-content: center;
+  transition: filter 0.1s, background-color 0.1s;
+}
+
+.empty {
+  composes: common;
+  background-color: var(--backgroundColor);
+}
+
+.filled {
+  composes: common;
+  background-color: var(--red);
+  width: 100%;
+  cursor: pointer;
+}
+
+.connected {
+  composes: common;
+  background-color: var(--sunshine);
+  width: 100%;
+  cursor: pointer;
+}
+
+.filled:hover,
+.connected:hover {
+  filter: brightness(80%);
+}

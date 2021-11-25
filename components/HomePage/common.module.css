@@ -1,0 +1,8 @@
+.main {
+  margin-left: var(--pageMarginHorizontal);
+  margin-right: var(--pageMarginHorizontal);
+}
+
+.main > * {
+  margin-top: var(--pageGap);
+}

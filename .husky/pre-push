@@ -1,0 +1,20 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# [More colors](https://www.shellhacks.com/bash-colors/)
+CYAN="\e[36;1m"
+YELLOW="\e[33;1m"
+NO_COLOR="\e[0m"
+PRETTIER_FIX_WARNING="Prettier reformatted your code. Please git commit again."
+
+printf "${CYAN}%s${NO_COLOR}\n" "------------- Prettier -------------"
+# Run yarn prettier:fix and exit when check failed
+yarn prettier:check || (yarn prettier:fix && printf "${YELLOW}%s${NO_COLOR}\n" "${PRETTIER_FIX_WARNING}" && exit 1)
+
+printf "${CYAN}%s${NO_COLOR}\n" "--------------- Lint ---------------"
+yarn lint:fix
+
+printf "${CYAN}%s${NO_COLOR}\n" "--------------- Test ---------------"
+yarn test:local
+
+printf "${CYAN}%s${NO_COLOR}\n" "--------------- Git ----------------"

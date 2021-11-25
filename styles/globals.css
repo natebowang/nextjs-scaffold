@@ -1,0 +1,68 @@
+@import 'colors.css';
+@import 'fonts.css';
+@import 'spaces.css';
+@import 'transitions.css';
+@import 'z-index.css';
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+body,
+button,
+h1,
+h2,
+h3,
+h4,
+hr,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-decoration: none;
+}
+a:focus {
+  /* Safely remove outline. This still work in the Windows high-contrast theme */
+  outline: 1px solid transparent;
+}
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  display: block;
+  padding: 0;
+}
+button:focus {
+  /* Safely remove outline. This still work in the Windows high-contrast theme */
+  outline: 1px solid transparent;
+}
+button:disabled {
+  /* If pointer-events is auto, ancestors can't receive any event neither */
+  /* But the reel covered by a disabled button need to receive some of the events to scroll. */
+  pointer-events: none;
+}
+
