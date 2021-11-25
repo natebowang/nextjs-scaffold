@@ -22,8 +22,6 @@ function areEqual(prevProps: Props, nextProps: Props) {
 }
 
 export default memo(function Square({ matrixElement, count, dispatch, index }: Props): JSX.Element {
-  console.log('render square')
-
   const changeState = (
     event:
       | PointerEvent<HTMLButtonElement>

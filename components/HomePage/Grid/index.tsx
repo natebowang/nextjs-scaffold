@@ -15,7 +15,7 @@ export default function Grid({ n }: Props): JSX.Element {
   return (
     <div className={style.matrix}>
       {matrix.map((matrixArray: MatrixArray, x: RowIndex) => (
-        <div className={style.row}>
+        <div className={style.row} key={x}>
           {matrixArray.map((matrixElement: MatrixElement, y: ColumnIndex) => (
             <Square
               matrixElement={matrixElement}
