@@ -1,4 +1,4 @@
-import type { Matrix } from '../../_types'
+import type { Matrix } from '../_types'
 import type { Store } from '../reducer'
 
 export const defaultMatrix: Matrix = [

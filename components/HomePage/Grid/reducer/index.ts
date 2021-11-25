@@ -1,4 +1,4 @@
-import type { Index, Matrix } from '../../_types'
+import type { Index, Matrix } from '../_types'
 import deepClone from './deepClone'
 import changeColor from './changeColor'
 import displayCount from './displayCount'

@@ -3,7 +3,7 @@ import Square from './Row/Square'
 import generateMatrix from './generateMatrix'
 import reducer from './reducer'
 import style from './common.module.css'
-import type { ColumnIndex, MatrixArray, MatrixElement, RowIndex } from '../_types'
+import type { ColumnIndex, MatrixArray, MatrixElement, RowIndex } from './_types'
 import { useReducer } from 'react'
 
 export type Props = {

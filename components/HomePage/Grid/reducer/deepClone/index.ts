@@ -1,4 +1,4 @@
-import type { Matrix, MatrixArray } from '../../../_types'
+import type { Matrix, MatrixArray } from '../../_types'
 
 function deepCloneArray(matrixArray: MatrixArray) {
   return matrixArray.slice()
