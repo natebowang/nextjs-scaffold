@@ -1,3 +1,8 @@
 .matrix {
   border: 1px solid var(--foregroundColor);
 }
+
+.row {
+  display: flex;
+  width: 100%;
+}

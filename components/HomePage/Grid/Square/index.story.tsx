@@ -1,5 +1,5 @@
 import type { Meta, Story } from '@storybook/react'
-import { ElementState } from '../../_types'
+import { ElementState } from '../_types'
 import Square, { Props } from './index'
 
 const Template: Story<Props> = (args) => {

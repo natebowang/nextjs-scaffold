@@ -1,7 +1,7 @@
 import style from './common.module.css'
-import type { Action } from '../../reducer'
-import type { MatrixElement, Index } from '../../_types'
-import { ElementState } from '../../_types'
+import type { Action } from '../reducer'
+import type { MatrixElement, Index } from '../_types'
+import { ElementState } from '../_types'
 import { Dispatch, FocusEvent, KeyboardEvent, PointerEvent, ReactNode, memo } from 'react'
 
 const { EMPTY, FILLED, FILLED_WITH_COUNT, CONNECTED, CONNECTED_WITH_COUNT } = ElementState
@@ -22,6 +22,8 @@ function areEqual(prevProps: Props, nextProps: Props) {
 }
 
 export default memo(function Square({ matrixElement, count, dispatch, index }: Props): JSX.Element {
+  console.log('render square')
+
   const changeState = (
     event:
       | PointerEvent<HTMLButtonElement>

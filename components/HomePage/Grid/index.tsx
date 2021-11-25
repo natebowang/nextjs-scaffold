@@ -1,5 +1,4 @@
-import Row from './Row'
-import Square from './Row/Square'
+import Square from './Square'
 import generateMatrix from './generateMatrix'
 import reducer from './reducer'
 import style from './common.module.css'
@@ -16,7 +15,7 @@ export default function Grid({ n }: Props): JSX.Element {
   return (
     <div className={style.matrix}>
       {matrix.map((matrixArray: MatrixArray, x: RowIndex) => (
-        <Row key={x}>
+        <div className={style.row}>
           {matrixArray.map((matrixElement: MatrixElement, y: ColumnIndex) => (
             <Square
               matrixElement={matrixElement}
@@ -26,7 +25,7 @@ export default function Grid({ n }: Props): JSX.Element {
               key={y}
             />
           ))}
-        </Row>
+        </div>
       ))}
     </div>
   )
