@@ -18,20 +18,11 @@
       "@/components/*": [
         "components/*"
       ],
-      "@/hooks/*": [
-        "hooks/*"
-      ],
-      "@/library/*": [
-        "library/*"
-      ],
       "@/pages/*": [
         "pages/*"
       ],
       "@/public/*": [
         "public/*"
-      ],
-      "@/store/*": [
-        "store/*"
       ]
     },
     "noEmit": true,

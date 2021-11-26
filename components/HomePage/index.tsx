@@ -6,7 +6,6 @@ export default function HomePage(): JSX.Element {
   return (
     <>
       <Header />
-      <h2 className={style.h2}>Grid: </h2>
       <main className={style.main}>
         <section>
           <h2 className={style.h2}>Grid: </h2>
