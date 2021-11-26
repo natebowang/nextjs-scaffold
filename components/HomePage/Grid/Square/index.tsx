@@ -26,7 +26,7 @@ export default memo(function Square({ matrixElement, count, dispatch, index }: P
   ) => {
     const { type } = event
 
-    if (!event.hasOwnProperty('key')) {
+    if (!Object.prototype.hasOwnProperty.call(event, 'key')) {
       // Point event or focus event
       dispatch({ type, index })
     } else if ((event as KeyboardEvent<HTMLButtonElement>).key === 'Enter') {
@@ -38,17 +38,28 @@ export default memo(function Square({ matrixElement, count, dispatch, index }: P
   const squareMap: Record<MatrixElement, ReactNode> = {
     [EMPTY]: <div className={style.empty}>&nbsp;</div>,
     [FILLED]: (
-      <button className={style.filled} onPointerEnter={changeState} onFocus={changeState}>
+      <button
+        aria-label="filled square"
+        className={style.filled}
+        onPointerEnter={changeState}
+        onFocus={changeState}
+      >
         &nbsp;
       </button>
     ),
     [FILLED_WITH_COUNT]: (
-      <button className={style.filled} onPointerEnter={changeState} onFocus={changeState}>
+      <button
+        aria-label="filled square with count"
+        className={style.filled}
+        onPointerEnter={changeState}
+        onFocus={changeState}
+      >
         {count}
       </button>
     ),
     [CONNECTED]: (
       <button
+        aria-label="connected square"
         className={style.connected}
         onPointerEnter={changeState}
         onFocus={changeState}
@@ -62,6 +73,7 @@ export default memo(function Square({ matrixElement, count, dispatch, index }: P
     ),
     [CONNECTED_WITH_COUNT]: (
       <button
+        aria-label="connected square with count"
         className={style.connected}
         onPointerEnter={changeState}
         onFocus={changeState}

@@ -1,4 +1,4 @@
-import type { Index, Matrix, MatrixArray } from '../../_types'
+import type { Index, Matrix } from '../../_types'
 import { ElementState } from '../../_types'
 
 const { FILLED, FILLED_WITH_COUNT, CONNECTED, CONNECTED_WITH_COUNT } = ElementState

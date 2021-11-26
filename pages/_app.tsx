@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap"
         />
-        <title key="title">Nathan Wang's test</title>
+        <title key="title">Nathan Wang&apos;s test</title>
       </Head>
       <Component {...pageProps} />
     </>
