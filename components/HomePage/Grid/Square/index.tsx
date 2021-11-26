@@ -75,5 +75,5 @@ export default memo(function Square({ matrixElement, count, dispatch, index }: P
     ),
   }
 
-  return <>{squareMap[matrixElement]}</>
+  return <td className={style.td}>{squareMap[matrixElement]}</td>
 }, areEqual)
