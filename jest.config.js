@@ -1,5 +1,5 @@
 module.exports = {
-  collectCoverageFrom: ['./components/**/*.{ts,tsx}'],
+  collectCoverageFrom: ['./components/**/*.{ts,tsx}', '!**/*.story.tsx'],
   moduleNameMapper: {
     '^@/components/(.*)$': './components/$1',
     '^@/pages/(.*)$': './pages/$1',
