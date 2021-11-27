@@ -13,6 +13,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
           href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap"
         />
         <title key="title">Nathan Wang&apos;s test</title>
+        <meta name="description" content="Nathan Wang's test." />
       </Head>
       <Component {...pageProps} />
     </>

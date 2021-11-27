@@ -26,7 +26,7 @@ export default function HomePage(): JSX.Element {
           />
         </section>
         <section>
-          <Grid n={n} />
+          <Grid n={n} key={n} />
         </section>
         {/*TODO*/}
         <article>hello</article>
