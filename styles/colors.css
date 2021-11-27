@@ -5,7 +5,7 @@
   --offBlack: hsla(0, 0%, 10%, 1);
 
   /* Alias */
-  --backgroundColor: transparent;
+  --backgroundColor: hsla(0, 0%, 100%, 1);
   --foregroundColor: var(--offBlack);
   --hoverColor: var(--sunshine)
 }

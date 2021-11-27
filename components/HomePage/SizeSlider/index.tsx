@@ -6,7 +6,7 @@ export type Props = {
   setN: Dispatch<SetStateAction<number>>
 }
 
-export default function Input({ n, setN }: Props): JSX.Element {
+export default function SizeSlider({ n, setN }: Props): JSX.Element {
   const handleChange = ({ target: { value } }: ChangeEvent<HTMLInputElement>) => {
     setN(parseInt(value))
   }

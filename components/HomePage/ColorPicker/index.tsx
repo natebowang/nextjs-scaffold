@@ -1,12 +1,14 @@
+import { useEffect, useState } from 'react'
 import style from './common.module.css'
-import { HexColorPicker } from 'react-colorful'
+import { HslaStringColorPicker } from 'react-colorful'
 
 export type Props = {
   label: string
   cssVariableName: string
+  initColor: string
 }
 
-export default function ColorPicker({ label, cssVariableName }: Props) {
+export default function ColorPicker({ label, cssVariableName, initColor }: Props) {
   const setColor = (color: string) => {
     document.documentElement.style.setProperty(cssVariableName, color)
   }
@@ -14,7 +16,7 @@ export default function ColorPicker({ label, cssVariableName }: Props) {
   return (
     <label className={style.label}>
       {label}:
-      <HexColorPicker className={style.colorPicker} color={'white'} onChange={setColor} />
+      <HslaStringColorPicker className={style.colorPicker} color={initColor} onChange={setColor} />
     </label>
   )
 }
