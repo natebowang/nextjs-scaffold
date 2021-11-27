@@ -65,4 +65,3 @@ button:disabled {
   /* But the reel covered by a disabled button need to receive some of the events to scroll. */
   pointer-events: none;
 }
-
