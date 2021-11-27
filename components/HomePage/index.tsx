@@ -49,15 +49,17 @@ export default function HomePage(): JSX.Element {
             added a fallback to display rectangle cells in older browsers. CSS padding tricks or JS
             can do the job if we need to display squares in older browsers.
             <br />
-            5. Test: TS for static type check, Storybook for UI development and documentation, Jest
+            5. SEO: meta, title.
+            <br />
+            6. Test: TS for static type check, Storybook for UI development and documentation, Jest
             unit test, React Testing Library integration test, Playwright e2e test.
             <br />
-            6. Toolchain: Native ES Modules, NVM, Husky, PNPM.
+            7. Toolchain: Native ES Modules, NVM, Husky, PNPM.
             <br />
-            7. Deployment: Deploy to Vercel. Automatically deploy when pushed to the production
+            8. Deployment: Deploy to Vercel. Automatically deploy when pushed to the production
             branch.
             <br />
-            8. Code readability: the components folder structure follows the structure of the DOM
+            9. Code readability: the components folder structure follows the structure of the DOM
             tree, the pages folder structure follows the structure of the URL.
             <br />
             Thanks and all the best,
