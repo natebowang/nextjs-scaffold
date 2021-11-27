@@ -37,7 +37,7 @@
 
 .connected {
   composes: common;
-  background-color: var(--sunshine);
+  background-color: var(--hoverColor);
   width: 100%;
   cursor: pointer;
 }

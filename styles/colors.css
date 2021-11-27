@@ -7,4 +7,5 @@
   /* Alias */
   --backgroundColor: transparent;
   --foregroundColor: var(--offBlack);
+  --hoverColor: var(--sunshine)
 }
