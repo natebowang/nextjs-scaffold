@@ -9,3 +9,10 @@
 .main > article > p + p {
   margin-top: var(--space1);
 }
+
+.main > article > p > a {
+  color: blue;
+}
+.main > article > p > a:hover {
+  text-decoration: underline;
+}
