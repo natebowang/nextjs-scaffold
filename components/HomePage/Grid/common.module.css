@@ -2,6 +2,7 @@
   border-spacing: 0;
   border: 1px solid var(--foregroundColor);
   width: 100%;
+  max-width: 90rem;
 }
 
 .row {

@@ -46,3 +46,10 @@
 .connected:hover {
   filter: brightness(80%);
 }
+
+/* Large 1024-1499 */
+@media only screen and (min-width: 1024px) {
+  .common {
+    font-size: 6.14rem;
+  }
+}

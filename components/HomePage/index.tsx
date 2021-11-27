@@ -51,16 +51,18 @@ export default function HomePage(): JSX.Element {
             <br />
             5. SEO: meta, title.
             <br />
-            6. Test: TS for static type check, Storybook for UI development and documentation, Jest
+            6. Responsibility: Available on mobile and big screen.
+            <br />
+            7. Test: TS for static type check, Storybook for UI development and documentation, Jest
             unit test, React Testing Library integration test, Playwright e2e test.
             <br />
-            7. Toolchain: Native ES Modules, NVM, Husky, PNPM. I wrote all lines of code in this
+            8. Toolchain: Native ES Modules, NVM, Husky, PNPM. I wrote all lines of code in this
             repo, including the husky script.
             <br />
-            8. Deployment: Deploy to Vercel. Automatically deploy when pushed to the production
+            9. Deployment: Deploy to Vercel. Automatically deploy when pushed to the production
             branch.
             <br />
-            9. Code readability: the components folder structure follows the structure of the DOM
+            10. Code readability: the components folder structure follows the structure of the DOM
             tree, the pages folder structure follows the structure of the URL.
             <br />
             Thanks and all the best,
