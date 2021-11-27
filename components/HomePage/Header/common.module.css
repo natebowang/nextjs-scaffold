@@ -1,13 +1,9 @@
 .header {
   margin-top: var(--pageGap);
-}
-
-.header > p {
-  font-size: 3rem;
   margin-left: var(--pageMarginHorizontal);
   margin-right: var(--pageMarginHorizontal);
 }
 
-.header > p + p {
-  margin-top: var(--space1point5);
+.header h1 {
+  font-size: 4rem;
 }

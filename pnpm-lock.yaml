@@ -8,7 +8,7 @@ specifiers:
   '@babel/preset-typescript': 7.16.0
   '@commitlint/cli': 15.0.0
   '@commitlint/config-conventional': 15.0.0
-  '@playwright/test': ^1.16.3
+  '@playwright/test': 1.16.3
   '@storybook/addon-a11y': 6.3.12
   '@storybook/addon-actions': 6.3.12
   '@storybook/addon-essentials': 6.3.12
@@ -16,7 +16,6 @@ specifiers:
   '@storybook/react': 6.3.12
   '@testing-library/jest-dom': 5.15.1
   '@testing-library/react': 12.1.2
-  '@types/lodash': 4.14.177
   '@types/ramda': 0.27.50
   '@types/react': 17.0.36
   '@types/react-dom': 17.0.11
@@ -35,8 +34,6 @@ specifiers:
   husky: 7.0.4
   identity-obj-proxy: 3.0.0
   jest: 27.3.1
-  lodash.debounce: 4.0.8
-  lodash.throttle: 4.1.1
   next: 12.0.4
   prettier: 2.4.1
   ramda: 0.27.1
@@ -56,8 +53,6 @@ specifiers:
   webpack-bundle-analyzer: 4.5.0
 
 dependencies:
-  lodash.debounce: 4.0.8
-  lodash.throttle: 4.1.1
   next: 12.0.4_aae888dfa296766acacf1a733aa50b3a
   ramda: 0.27.1
   react: 17.0.2
@@ -82,7 +77,6 @@ devDependencies:
   '@storybook/react': 6.3.12_61f2910a051d3f9fa6e1de8f304681fa
   '@testing-library/jest-dom': 5.15.1
   '@testing-library/react': 12.1.2_react-dom@17.0.2+react@17.0.2
-  '@types/lodash': 4.14.177
   '@types/ramda': 0.27.50
   '@types/react': 17.0.36
   '@types/react-dom': 17.0.11
@@ -4119,10 +4113,6 @@ packages:
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=}
-    dev: true
-
-  /@types/lodash/4.14.177:
-    resolution: {integrity: sha512-0fDwydE2clKe9MNfvXHBHF9WEahRuj+msTuQqOmAApNORFvhMYZKNGGJdCzuhheVjMps/ti0Ak/iJPACMaevvw==}
     dev: true
 
   /@types/markdown-to-jsx/6.11.3:
@@ -9933,6 +9923,7 @@ packages:
 
   /lodash.debounce/4.0.8:
     resolution: {integrity: sha1-gteb/zCmfEAF/9XiUVMArZyk168=}
+    dev: true
 
   /lodash.get/4.4.2:
     resolution: {integrity: sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=}
@@ -9948,10 +9939,6 @@ packages:
 
   /lodash.sortby/4.7.0:
     resolution: {integrity: sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=}
-    dev: false
-
-  /lodash.throttle/4.1.1:
-    resolution: {integrity: sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=}
     dev: false
 
   /lodash.truncate/4.4.2:

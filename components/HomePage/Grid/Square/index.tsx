@@ -2,7 +2,7 @@ import style from './common.module.css'
 import type { Action } from '../reducer'
 import type { MatrixElement, Index } from '../_types'
 import { ElementState } from '../_types'
-import { Dispatch, FocusEvent, KeyboardEvent, PointerEvent, ReactNode, memo } from 'react'
+import { Dispatch, FocusEvent, KeyboardEvent, MouseEvent, ReactNode, memo } from 'react'
 
 const { EMPTY, FILLED, FILLED_WITH_COUNT, CONNECTED, CONNECTED_WITH_COUNT } = ElementState
 
@@ -18,16 +18,19 @@ function areEqual(prevProps: Props, nextProps: Props) {
 }
 
 export default memo(function Square({ matrixElement, count, dispatch, index }: Props): JSX.Element {
+  console.log('render square')
+
   const changeState = (
     event:
-      | PointerEvent<HTMLButtonElement>
+      | MouseEvent<HTMLButtonElement>
       | FocusEvent<HTMLButtonElement>
       | KeyboardEvent<HTMLButtonElement>,
   ) => {
     const { type } = event
+    console.log(type + ' fired')
 
     if (!Object.prototype.hasOwnProperty.call(event, 'key')) {
-      // Point event or focus event
+      // Mouse event or focus event
       dispatch({ type, index })
     } else if ((event as KeyboardEvent<HTMLButtonElement>).key === 'Enter') {
       // Keyboard event of pressing enter
@@ -41,7 +44,7 @@ export default memo(function Square({ matrixElement, count, dispatch, index }: P
       <button
         aria-label="filled square"
         className={style.filled}
-        onPointerEnter={changeState}
+        onMouseEnter={changeState}
         onFocus={changeState}
       >
         &nbsp;
@@ -51,7 +54,7 @@ export default memo(function Square({ matrixElement, count, dispatch, index }: P
       <button
         aria-label="filled square with count"
         className={style.filled}
-        onPointerEnter={changeState}
+        onMouseEnter={changeState}
         onFocus={changeState}
       >
         {count}
@@ -61,11 +64,11 @@ export default memo(function Square({ matrixElement, count, dispatch, index }: P
       <button
         aria-label="connected square"
         className={style.connected}
-        onPointerEnter={changeState}
+        onMouseEnter={changeState}
         onFocus={changeState}
-        onPointerLeave={changeState}
+        onMouseLeave={changeState}
         onBlur={changeState}
-        onPointerDown={changeState}
+        onClick={changeState}
         onKeyDown={changeState}
       >
         &nbsp;
@@ -75,11 +78,11 @@ export default memo(function Square({ matrixElement, count, dispatch, index }: P
       <button
         aria-label="connected square with count"
         className={style.connected}
-        onPointerEnter={changeState}
+        onMouseEnter={changeState}
         onFocus={changeState}
-        onPointerLeave={changeState}
+        onMouseLeave={changeState}
         onBlur={changeState}
-        onPointerDown={changeState}
+        onClick={changeState}
         onKeyDown={changeState}
       >
         {count}

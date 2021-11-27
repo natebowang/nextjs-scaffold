@@ -13,23 +13,26 @@ export default function HomePage(): JSX.Element {
       <Header />
       <main className={style.main}>
         <section>
+          <Grid n={n} key={n} />
+        </section>
+        <section>
           <SizeSlider n={n} setN={setN} />
-          <ColorPicker
-            label="Hover Colour"
-            cssVariableName="--hoverColor"
-            initColor="hsla(47, 98%, 51%, 1)"
-          />
           <ColorPicker
             label="Background Colour"
             cssVariableName="--backgroundColor"
             initColor="hsla(0, 0%, 100%, 1)"
           />
+          <ColorPicker
+            label="Hover Colour"
+            cssVariableName="--hoverColor"
+            initColor="hsla(47, 98%, 51%, 1)"
+          />
         </section>
-        <section>
-          <Grid n={n} key={n} />
-        </section>
-        {/*TODO*/}
-        <article>hello</article>
+        <article>
+          <p>Hi,</p>
+          <p>Thank you for your time reviewing this code. </p>
+          <p>Nathan Wang</p>
+        </article>
       </main>
     </>
   )

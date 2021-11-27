@@ -4,11 +4,11 @@ import changeColor from './changeColor'
 import displayCount from './displayCount'
 import resetColor from './resetColor'
 
-const POINTER_ENTER = 'pointerenter'
+const MOUSE_ENTER = 'mouseenter'
 const FOCUS = 'focus'
-const POINTER_LEAVE = 'pointerleave'
+const MOUSE_LEAVE = 'mouseleave'
 const BLUR = 'blur'
-const POINTER_DOWN = 'pointerdown'
+const CLICK = 'click'
 const KEY_DOWN = 'keydown'
 
 export type Store = {
@@ -25,13 +25,13 @@ export default function reducer({ matrix, count }: Store, { type, index }: Actio
   const clonedMatrix = deepClone(matrix)
 
   switch (type) {
-    case POINTER_ENTER:
+    case MOUSE_ENTER:
     case FOCUS:
       return changeColor(clonedMatrix, count, index)
-    case POINTER_LEAVE:
+    case MOUSE_LEAVE:
     case BLUR:
       return { matrix: resetColor(clonedMatrix), count }
-    case POINTER_DOWN:
+    case CLICK:
     case KEY_DOWN:
       return { matrix: displayCount(clonedMatrix, index), count }
     default:
