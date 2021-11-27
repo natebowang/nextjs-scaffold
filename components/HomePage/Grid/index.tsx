@@ -1,5 +1,5 @@
 import Square from './Square'
-import generateMatrix from './generateMatrix'
+import generateStore from './generateStore'
 import reducer from './reducer'
 import style from './common.module.css'
 import type { ColumnIndex, MatrixArray, MatrixElement, RowIndex } from './_types'
@@ -10,7 +10,7 @@ export type Props = {
 }
 
 export default function Grid({ n }: Props): JSX.Element {
-  const [{ matrix, count }, dispatch] = useReducer(reducer, n, generateMatrix)
+  const [{ matrix, count }, dispatch] = useReducer(reducer, n, generateStore)
 
   return (
     <>
