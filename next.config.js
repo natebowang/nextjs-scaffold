@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
-const headers = [
+const securityHeaders = [
   {
     key: 'Content-Security-Policy',
     value: "frame-ancestors 'self'; " + 'report-uri https://ava.report-uri.com/r/d/csp/enforce; ',
@@ -61,7 +61,7 @@ const moduleExports = {
     return [
       {
         source: '/',
-        headers,
+        headers: securityHeaders,
       },
     ]
   },
