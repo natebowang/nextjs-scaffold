@@ -1,0 +1,11 @@
+.label {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 3rem;
+  gap: 1rem;
+}
+
+.input {
+  flex: auto;
+  max-width: 100%;
+}
