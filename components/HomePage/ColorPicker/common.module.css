@@ -4,7 +4,7 @@
   font-size: 3rem;
 }
 
-.input {
-  flex: auto;
-  width: 100%;
+.colorPicker {
+  min-width: 100%;
+  max-width: 100%;
 }

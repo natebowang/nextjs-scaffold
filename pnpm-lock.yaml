@@ -41,6 +41,7 @@ specifiers:
   prettier: 2.4.1
   ramda: 0.27.1
   react: 17.0.2
+  react-colorful: ^5.5.1
   react-dom: 17.0.2
   react-icons: 4.3.1
   storybook-addon-pseudo-states: 1.0.0
@@ -60,6 +61,7 @@ dependencies:
   next: 12.0.4_aae888dfa296766acacf1a733aa50b3a
   ramda: 0.27.1
   react: 17.0.2
+  react-colorful: 5.5.1_react-dom@17.0.2+react@17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-icons: 4.3.1_react@17.0.2
   tslib: 2.3.1
@@ -11672,7 +11674,6 @@ packages:
     dependencies:
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-    dev: true
 
   /react-dev-utils/11.0.4:
     resolution: {integrity: sha512-dx0LvIGHcOPtKbeiSUM4jqpBl3TcY7CDjZdfOIcKeznE7BWr9dg0iPG90G5yfVQ+p/rGNMXdbfStvzQZEVEi4A==}
