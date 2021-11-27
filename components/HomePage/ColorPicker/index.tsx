@@ -5,10 +5,11 @@ import { useState } from 'react'
 export type Props = {
   label: string
   cssVariableName: string
+  defaultColor: string
 }
 
-export default function ColorPicker({ label, cssVariableName }: Props) {
-  const [color, setColor] = useState('#aabbcc')
+export default function ColorPicker({ label, cssVariableName, defaultColor }: Props) {
+  const [color, setColor] = useState(defaultColor)
 
   return (
     <label className={style.label}>

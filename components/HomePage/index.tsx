@@ -14,8 +14,8 @@ export default function HomePage(): JSX.Element {
       <main className={style.main}>
         <section>
           <Input n={n} setN={setN} />
-          <ColorPicker label="Hover Colour" cssVariableName="" />
-          <ColorPicker label="Background Colour" cssVariableName="" />
+          <ColorPicker label="Hover Colour" cssVariableName="" defaultColor="#aabbcc" />
+          <ColorPicker label="Background Colour" cssVariableName="" defaultColor="white" />
         </section>
         <section>
           <Grid n={n} />
