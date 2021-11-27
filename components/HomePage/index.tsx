@@ -54,7 +54,8 @@ export default function HomePage(): JSX.Element {
             <br />
             6. Toolchain: Native ES Modules, NVM, Husky, PNPM.
             <br />
-            7. Deployment: Deploy to Vercel.
+            7. Deployment: Deploy to Vercel. Automatically deploy when pushed to the production
+            branch.
             <br />
             8. Code readability: the components folder structure follows the structure of the DOM
             tree, the pages folder structure follows the structure of the URL.
