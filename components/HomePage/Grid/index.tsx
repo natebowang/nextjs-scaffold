@@ -13,22 +13,25 @@ export default function Grid({ n }: Props): JSX.Element {
   const [{ matrix, count }, dispatch] = useReducer(reducer, n, generateMatrix)
 
   return (
-    <table className={style.table}>
-      <tbody>
-        {matrix.map((matrixArray: MatrixArray, x: RowIndex) => (
-          <tr className={style.row} key={x}>
-            {matrixArray.map((matrixElement: MatrixElement, y: ColumnIndex) => (
-              <Square
-                matrixElement={matrixElement}
-                count={count}
-                dispatch={dispatch}
-                index={{ x: x, y }}
-                key={y}
-              />
-            ))}
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <>
+      <h2 className={style.h2}>Grid: </h2>
+      <table className={style.table}>
+        <tbody>
+          {matrix.map((matrixArray: MatrixArray, x: RowIndex) => (
+            <tr className={style.row} key={x}>
+              {matrixArray.map((matrixElement: MatrixElement, y: ColumnIndex) => (
+                <Square
+                  matrixElement={matrixElement}
+                  count={count}
+                  dispatch={dispatch}
+                  index={{ x: x, y }}
+                  key={y}
+                />
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </>
   )
 }

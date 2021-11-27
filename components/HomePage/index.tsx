@@ -18,9 +18,10 @@ export default function HomePage(): JSX.Element {
           <ColorPicker label="Background Colour" cssVariableName="" />
         </section>
         <section>
-          <h2 className={style.h2}>Grid: </h2>
           <Grid n={n} />
         </section>
+        {/*TODO*/}
+        <article>hello</article>
       </main>
     </>
   )

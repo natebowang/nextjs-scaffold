@@ -6,7 +6,3 @@
 .main > * {
   margin-top: var(--pageGap);
 }
-
-.h2 {
-  font-size: 3rem;
-}
