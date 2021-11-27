@@ -8,7 +8,7 @@ const securityHeaders = [
   },
   {
     key: 'Permissions-Policy',
-    value: "fullscreen=(self), camera=(), microphone=(), geolocation=()",
+    value: 'fullscreen=(self), camera=(), microphone=(), geolocation=()',
   },
   {
     key: 'Referrer-Policy',
