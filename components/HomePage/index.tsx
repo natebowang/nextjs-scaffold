@@ -44,7 +44,7 @@ export default function HomePage(): JSX.Element {
             3. Security: Synk website scan score is A+. HTTPS, 8 security headers including a basic
             CSP.
             <br />
-            4. Browser compatibility: tested on the latest Chrome, Firefox and Safari. The latest
+            4. Browser compatibility: tested on the latest Chrome, Firefox and Safari. The newest
             feature used is aspect-ratio. It is well supported across the latest major browsers. I
             added a fallback to display rectangle cells in older browsers. CSS padding tricks or JS
             can do the job if we need to display squares in older browsers.
@@ -54,7 +54,8 @@ export default function HomePage(): JSX.Element {
             6. Test: TS for static type check, Storybook for UI development and documentation, Jest
             unit test, React Testing Library integration test, Playwright e2e test.
             <br />
-            7. Toolchain: Native ES Modules, NVM, Husky, PNPM.
+            7. Toolchain: Native ES Modules, NVM, Husky, PNPM. I wrote all lines of code in this
+            repo, including the husky script.
             <br />
             8. Deployment: Deploy to Vercel. Automatically deploy when pushed to the production
             branch.
