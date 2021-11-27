@@ -30,8 +30,13 @@ export default function HomePage(): JSX.Element {
         </section>
         <article>
           <p>Hi,</p>
-          <p>Thank you for your time reviewing this code. </p>
-          <p>Nathan Wang</p>
+          <p>
+            Thank you for your time reviewing. <br />
+          </p>
+          <p>
+            Nathan Wang <br />
+            auvmacintosh1@gmail.com
+          </p>
         </article>
       </main>
     </>

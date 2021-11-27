@@ -1,8 +1,11 @@
 .main {
-  margin-left: var(--pageMarginHorizontal);
-  margin-right: var(--pageMarginHorizontal);
+  margin: 0 var(--pageMarginHorizontal) var(--pageGap);
 }
 
 .main > * {
   margin-top: var(--pageGap);
+}
+
+.main > article > p + p {
+  margin-top: var(--space1);
 }

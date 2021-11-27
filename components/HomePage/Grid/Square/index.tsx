@@ -18,8 +18,6 @@ function areEqual(prevProps: Props, nextProps: Props) {
 }
 
 export default memo(function Square({ matrixElement, count, dispatch, index }: Props): JSX.Element {
-  console.log('render square')
-
   const changeState = (
     event:
       | MouseEvent<HTMLButtonElement>
@@ -27,8 +25,6 @@ export default memo(function Square({ matrixElement, count, dispatch, index }: P
       | KeyboardEvent<HTMLButtonElement>,
   ) => {
     const { type } = event
-    console.log(type + ' fired')
-
     if (!Object.prototype.hasOwnProperty.call(event, 'key')) {
       // Mouse event or focus event
       dispatch({ type, index })
