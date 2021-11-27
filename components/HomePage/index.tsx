@@ -36,7 +36,7 @@ export default function HomePage(): JSX.Element {
             On top of all the features listed in the document, this project also accomplished the
             following task:
             <br />
-            1. Performance: using useStore and memo to avoid unnecessary renders, SSR pre-render
+            1. Performance: using useStore and memo to avoid unnecessary renders, SSG pre-render
             pages.
             <br />
             2. Accessibility: semantic HTML tag, support tab and enter key&apos;s interaction.
