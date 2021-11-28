@@ -1,0 +1,10 @@
+.article > p + p {
+    margin-top: var(--space1);
+}
+
+.article > p > a {
+    color: blue;
+}
+.article > p > a:hover {
+    text-decoration: underline;
+}

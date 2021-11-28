@@ -7,6 +7,7 @@ import { useReducer } from 'react'
 
 export type Props = {
   n: number
+  key: number
 }
 
 export default function Grid({ n }: Props): JSX.Element {
