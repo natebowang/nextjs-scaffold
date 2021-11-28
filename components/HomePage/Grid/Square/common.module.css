@@ -1,5 +1,4 @@
 .td {
-  border: 1px solid var(--foregroundColor);
   flex: 1 0 0;
   padding: 0;
 }
@@ -15,6 +14,7 @@
   /* TODO: Use a react hook and resize observer API to measure the width, and set height equals to width
       if we need more browser compatibility */
   aspect-ratio: 1 / 1;
+  border: 1px solid var(--foregroundColor);
   color: var(--foregroundColor);
   display: flex;
   font-size: 6vw;
