@@ -1,8 +1,6 @@
 This is a [Next.js](https://nextjs.org/) scaffold.
 
-# Getting Started
-
-Run the development server:
+# Run the development server:
 
 ```bash
 pnpm dev
@@ -13,9 +11,16 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the
 file.
 
-# Jest unit tests and integration tests
+# Run the production server
 
-Run the Jest server:
+```bash
+pnpm build
+pnpm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+# Jest unit tests and integration tests
 
 ```bash
 pnpm test # jest --watch 
@@ -30,8 +35,6 @@ pnpm dev && pnpm test:e2e # start a server on localhost:3000 first
 ```
 
 # StoryBook
-
-Run the StoryBook server:
 
 ```bash
 pnpm storybook
