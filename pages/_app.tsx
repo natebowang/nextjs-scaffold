@@ -4,6 +4,8 @@ import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
+    // Default title and meta description goes here.
+    // They will be override by title and description in the page component.
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />

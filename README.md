@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) scaffold.
 
-## Getting Started
+# Getting Started
 
 Run the development server:
 
@@ -13,7 +13,23 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the
 file.
 
-## StoryBook
+# Jest unit tests and integration tests
+
+Run the Jest server:
+
+```bash
+pnpm test # jest --watch 
+pnpm test:coverage # jest --coverage
+```
+
+# Playwright e2e tests
+
+```bash
+pnpx playwright install # install supported browsers
+pnpm dev && pnpm test:e2e # start a server on localhost:3000 first
+```
+
+# StoryBook
 
 Run the StoryBook server:
 
