@@ -8,6 +8,9 @@ module.exports = {
     'storybook-addon-pseudo-states',
     '@storybook/addon-essentials',
   ],
+  core: {
+    builder: "webpack5",
+  },
   stories: ['../components/**/*.story.tsx'],
   webpackFinal: (config) => {
     // Options for using CSS modules
@@ -25,7 +28,7 @@ module.exports = {
     }
 
     // Options for using TS path alias
-    config.resolve.plugins = [...config.resolve.plugins, new TsconfigPathsPlugin()]
+    config.resolve.plugins = [...(config.resolve?.plugins ?? []), new TsconfigPathsPlugin()]
 
     return config
   },
