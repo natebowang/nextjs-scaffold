@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) app for AVA.
+This is a [Next.js](https://nextjs.org/) scaffold.
 
 ## Getting Started
 

@@ -7,9 +7,9 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <link rel="icon" href="https://www.avasecurity.com/hubfs/Ava%20favicon.png" />
+        <link rel="icon" href="" />
         <title key="title">Nathan Wang&apos;s test</title>
-        <meta name="description" content="Nathan Wang's test." />
+        <meta name="description" content="Nextjs Scaffold" />
       </Head>
       <Component {...pageProps} />
     </>
