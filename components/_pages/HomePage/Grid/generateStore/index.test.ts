@@ -1,4 +1,4 @@
-import generateMatrix from '.'
+import generateMatrix from './index'
 
 // TODO: complete the unit test
 test('generateMatrix', () => {

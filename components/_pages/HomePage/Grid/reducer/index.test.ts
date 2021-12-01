@@ -1,4 +1,4 @@
-import reducer from '.'
+import reducer from './index'
 
 // TODO: complete the unit test
 test('reducer', () => {

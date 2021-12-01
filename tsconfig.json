@@ -15,8 +15,14 @@
     "module": "esnext",
     "moduleResolution": "node",
     "paths": {
-      "@/components/*": [
-        "components/*"
+      "@/components/_features/*": [
+        "components/_features/*"
+      ],
+      "@/components/_pages/*": [
+        "components/_pages/*"
+      ],
+      "@/components/_uis/*": [
+        "components/_uis/*"
       ],
       "@/pages/*": [
         "pages/*"

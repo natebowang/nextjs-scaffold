@@ -1,7 +1,9 @@
 module.exports = {
   collectCoverageFrom: ['./components/**/*.{ts,tsx}', '!**/*.story.tsx'],
   moduleNameMapper: {
-    '^@/components/(.*)$': './components/$1',
+    '^@/components/_features/(.*)$': './components/_features/$1',
+    '^@/components/_pages/(.*)$': './components/_pages/$1',
+    '^@/components/_uis/(.*)$': './components/_uis/$1',
     '^@/pages/(.*)$': './pages/$1',
     '\\.(css)$': 'identity-obj-proxy',
   },

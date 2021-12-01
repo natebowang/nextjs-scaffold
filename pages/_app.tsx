@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <link rel="icon" href="" />
-        <title key="title">Nathan Wang&apos;s test</title>
+        <title key="title">Nextjs Scaffold</title>
         <meta name="description" content="Nextjs Scaffold" />
       </Head>
       <Component {...pageProps} />

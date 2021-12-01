@@ -1,5 +1,6 @@
 import ColorPicker from './ColorPicker'
 import Grid from './Grid'
+import Head from 'next/head'
 import Header from './Header'
 import SizeSlider from './SizeSlider'
 import style from './common.module.css'
@@ -11,6 +12,10 @@ export default function HomePage(): JSX.Element {
 
   return (
     <>
+      <Head>
+        <title key="title">Nextjs Scaffold</title>
+        <meta name="description" content="Nextjs Scaffold" />
+      </Head>
       <Header />
       <main className={style.main}>
         <section>
