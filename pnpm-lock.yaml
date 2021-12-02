@@ -56,8 +56,6 @@ specifiers:
   webpack-bundle-analyzer: 4.5.0
 
 dependencies:
-  eslint-plugin-sort-destructure-keys: 1.4.0_eslint@7.32.0
-  eslint-plugin-sort-imports-es6-autofix: 0.6.0_eslint@7.32.0
   next: 12.0.4_aae888dfa296766acacf1a733aa50b3a
   react: 17.0.2
   react-colorful: 5.5.1_react-dom@17.0.2+react@17.0.2
@@ -97,6 +95,8 @@ devDependencies:
   eslint-plugin-jsx-a11y: 6.5.1_eslint@7.32.0
   eslint-plugin-react: 7.27.1_eslint@7.32.0
   eslint-plugin-react-hooks: 4.3.0_eslint@7.32.0
+  eslint-plugin-sort-destructure-keys: 1.4.0_eslint@7.32.0
+  eslint-plugin-sort-imports-es6-autofix: 0.6.0_eslint@7.32.0
   husky: 7.0.4
   identity-obj-proxy: 3.0.0
   jest: 27.3.1_ts-node@10.4.0
@@ -7660,7 +7660,7 @@ packages:
     dependencies:
       eslint: 7.32.0
       natural-compare-lite: 1.4.0
-    dev: false
+    dev: true
 
   /eslint-plugin-sort-imports-es6-autofix/0.6.0_eslint@7.32.0:
     resolution: {integrity: sha512-2NVaBGF9NN+727Fyq+jJYihdIeegjXeUUrZED9Q8FVB8MsV3YQEyXG96GVnXqWt0pmn7xfCZOZf3uKnIhBrfeQ==}
@@ -7668,7 +7668,7 @@ packages:
       eslint: '>=7.7.0'
     dependencies:
       eslint: 7.32.0
-    dev: false
+    dev: true
 
   /eslint-scope/4.0.3:
     resolution: {integrity: sha512-p7VutNr1O/QrxysMo3E45FjYDTeXBy0iTltPFNSqKAIfjDSXC+4dj+qfyuD8bfAXrW/y6lW3O76VaYNPKfpKrg==}
@@ -11109,7 +11109,7 @@ packages:
 
   /natural-compare-lite/1.4.0:
     resolution: {integrity: sha1-F7CVgZiJef3a/gIB6TG6kzyWy7Q=}
-    dev: false
+    dev: true
 
   /natural-compare/1.4.0:
     resolution: {integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=}
