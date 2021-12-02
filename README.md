@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) scaffold.
+This is a [Next.js](https://nextjs.org/), Storybook webpack5 scaffold.
 
 # Run the development server:
 
