@@ -38,7 +38,14 @@ module.exports = {
       typescript: {},
     },
   },
-  plugins: ['@typescript-eslint', 'import', 'react', 'react-hooks'],
+  plugins: [
+    '@typescript-eslint',
+    'sort-destructure-keys',
+    'sort-imports-es6-autofix',
+    'import',
+    'react',
+    'react-hooks',
+  ],
   rules: {
     // NextJs specific fix: suppress errors for missing 'import React' in files for NextJs
     'react/react-in-jsx-scope': 'off',
@@ -49,5 +56,14 @@ module.exports = {
     '@typescript-eslint/no-empty-function': 'off',
     // Need to disable this in Next.js projects, since href is on the next/link component.
     'jsx-a11y/anchor-is-valid': 'off',
+    'sort-destructure-keys/sort-destructure-keys': ['warn', { caseSensitive: false }],
+    'sort-imports-es6-autofix/sort-imports-es6': [
+      'warn',
+      {
+        ignoreCase: false,
+        // ignoreMemberSort: false,
+        // memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+      },
+    ],
   },
 }

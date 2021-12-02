@@ -33,6 +33,8 @@ specifiers:
   eslint-plugin-jsx-a11y: 6.5.1
   eslint-plugin-react: 7.27.1
   eslint-plugin-react-hooks: 4.3.0
+  eslint-plugin-sort-destructure-keys: ^1.4.0
+  eslint-plugin-sort-imports-es6-autofix: ^0.6.0
   husky: 7.0.4
   identity-obj-proxy: 3.0.0
   jest: 27.3.1
@@ -40,7 +42,7 @@ specifiers:
   prettier: 2.4.1
   ramda: 0.27.1
   react: 17.0.2
-  react-colorful: ^5.5.1
+  react-colorful: 5.5.1
   react-dom: 17.0.2
   storybook-addon-pseudo-states: 1.0.0
   stylelint: 14.1.0
@@ -54,6 +56,8 @@ specifiers:
   webpack-bundle-analyzer: 4.5.0
 
 dependencies:
+  eslint-plugin-sort-destructure-keys: 1.4.0_eslint@7.32.0
+  eslint-plugin-sort-imports-es6-autofix: 0.6.0_eslint@7.32.0
   next: 12.0.4_aae888dfa296766acacf1a733aa50b3a
   react: 17.0.2
   react-colorful: 5.5.1_react-dom@17.0.2+react@17.0.2
@@ -7648,6 +7652,24 @@ packages:
       string.prototype.matchall: 4.0.6
     dev: true
 
+  /eslint-plugin-sort-destructure-keys/1.4.0_eslint@7.32.0:
+    resolution: {integrity: sha512-txU9l22mblz7YpyjJNYFy4wb5PVXiRMbc9lqFPPhvY4wKyBBYQvb31TIcduf7iRb4Bv01aiXcJiuCkOOrVY48Q==}
+    engines: {node: '>=6.0.0'}
+    peerDependencies:
+      eslint: 3 - 8
+    dependencies:
+      eslint: 7.32.0
+      natural-compare-lite: 1.4.0
+    dev: false
+
+  /eslint-plugin-sort-imports-es6-autofix/0.6.0_eslint@7.32.0:
+    resolution: {integrity: sha512-2NVaBGF9NN+727Fyq+jJYihdIeegjXeUUrZED9Q8FVB8MsV3YQEyXG96GVnXqWt0pmn7xfCZOZf3uKnIhBrfeQ==}
+    peerDependencies:
+      eslint: '>=7.7.0'
+    dependencies:
+      eslint: 7.32.0
+    dev: false
+
   /eslint-scope/4.0.3:
     resolution: {integrity: sha512-p7VutNr1O/QrxysMo3E45FjYDTeXBy0iTltPFNSqKAIfjDSXC+4dj+qfyuD8bfAXrW/y6lW3O76VaYNPKfpKrg==}
     engines: {node: '>=4.0.0'}
@@ -11084,6 +11106,10 @@ packages:
     dependencies:
       querystring: 0.2.1
     dev: true
+
+  /natural-compare-lite/1.4.0:
+    resolution: {integrity: sha1-F7CVgZiJef3a/gIB6TG6kzyWy7Q=}
+    dev: false
 
   /natural-compare/1.4.0:
     resolution: {integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=}

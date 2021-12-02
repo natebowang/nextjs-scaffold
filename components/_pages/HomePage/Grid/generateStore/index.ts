@@ -1,4 +1,4 @@
-import type { MatrixElement, Matrix } from '../_types'
+import type { Matrix, MatrixElement } from '../_types'
 import type { Store } from '../reducer'
 
 function generateElement(): MatrixElement {
