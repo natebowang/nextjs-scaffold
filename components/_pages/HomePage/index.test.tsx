@@ -1,4 +1,4 @@
-import mock from './Grid/generateStore/mock'
+import mock from './Grid/generateStore/index.mock'
 jest.mock('./Grid/generateStore', () => jest.fn(mock))
 
 import { render, screen } from '@testing-library/react'
