@@ -1,8 +1,8 @@
+import { ElementState } from '../../_types'
 import type { Index, Matrix } from '../../_types'
 import type { Store } from '../index'
-import { ElementState } from '../../_types'
 
-const { FILLED, FILLED_WITH_COUNT, CONNECTED, CONNECTED_WITH_COUNT } = ElementState
+const { CONNECTED, CONNECTED_WITH_COUNT, FILLED, FILLED_WITH_COUNT } = ElementState
 
 export default function changeColor(
   clonedMatrix: Matrix,

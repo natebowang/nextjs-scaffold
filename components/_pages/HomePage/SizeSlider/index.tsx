@@ -1,5 +1,5 @@
-import type { ChangeEvent, Dispatch, SetStateAction } from 'react'
 import style from './common.module.css'
+import type { ChangeEvent, Dispatch, SetStateAction } from 'react'
 
 export type Props = {
   n: number

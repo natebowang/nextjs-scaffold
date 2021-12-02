@@ -1,5 +1,5 @@
-import type { Meta, Story } from '@storybook/react'
 import Grid, { Props } from './index'
+import type { Meta, Story } from '@storybook/react'
 
 const Template: Story<Props> = (args) => {
   return <Grid {...args} />

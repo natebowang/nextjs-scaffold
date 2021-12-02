@@ -1,7 +1,7 @@
-import type { Matrix } from '../../_types'
 import { ElementState } from '../../_types'
+import type { Matrix } from '../../_types'
 
-const { FILLED, FILLED_WITH_COUNT, CONNECTED, CONNECTED_WITH_COUNT } = ElementState
+const { CONNECTED, CONNECTED_WITH_COUNT, FILLED, FILLED_WITH_COUNT } = ElementState
 
 export default function resetColor(clonedMatrix: Matrix): Matrix {
   clonedMatrix.forEach((matrixArray, x) => {

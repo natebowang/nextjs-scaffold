@@ -1,8 +1,8 @@
-import type { Index, Matrix } from '../_types'
-import deepClone from './deepClone'
 import changeColor from './changeColor'
+import deepClone from './deepClone'
 import displayCount from './displayCount'
 import resetColor from './resetColor'
+import type { Index, Matrix } from '../_types'
 
 const MOUSE_ENTER = 'mouseenter'
 const FOCUS = 'focus'
@@ -21,7 +21,7 @@ export type Action = {
   index: Index
 }
 
-export default function reducer({ matrix, count }: Store, { type, index }: Action): Store {
+export default function reducer({ count, matrix }: Store, { index, type }: Action): Store {
   const clonedMatrix = deepClone(matrix)
 
   switch (type) {

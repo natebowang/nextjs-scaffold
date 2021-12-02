@@ -1,9 +1,9 @@
+import { useReducer } from 'react'
 import Square from './Square'
 import generateStore from './generateStore'
 import reducer from './reducer'
 import style from './common.module.css'
 import type { ColumnIndex, MatrixArray, MatrixElement, RowIndex } from './_types'
-import { useReducer } from 'react'
 
 export type Props = {
   n: number
@@ -11,7 +11,7 @@ export type Props = {
 }
 
 export default function Grid({ n }: Props): JSX.Element {
-  const [{ matrix, count }, dispatch] = useReducer(reducer, n, generateStore)
+  const [{ count, matrix }, dispatch] = useReducer(reducer, n, generateStore)
 
   return (
     <>

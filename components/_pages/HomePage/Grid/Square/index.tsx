@@ -1,10 +1,10 @@
+import { Dispatch, FocusEvent, KeyboardEvent, MouseEvent, ReactNode, memo } from 'react'
+import { ElementState } from '../_types'
 import style from './common.module.css'
 import type { Action } from '../reducer'
-import type { MatrixElement, Index } from '../_types'
-import { ElementState } from '../_types'
-import { Dispatch, FocusEvent, KeyboardEvent, MouseEvent, ReactNode, memo } from 'react'
+import type { Index, MatrixElement } from '../_types'
 
-const { EMPTY, FILLED, FILLED_WITH_COUNT, CONNECTED, CONNECTED_WITH_COUNT } = ElementState
+const { CONNECTED, CONNECTED_WITH_COUNT, EMPTY, FILLED, FILLED_WITH_COUNT } = ElementState
 
 export type Props = {
   matrixElement: MatrixElement
@@ -17,7 +17,7 @@ function areEqual(prevProps: Props, nextProps: Props) {
   return prevProps.matrixElement === nextProps.matrixElement
 }
 
-export default memo(function Square({ matrixElement, count, dispatch, index }: Props): JSX.Element {
+export default memo(function Square({ count, dispatch, index, matrixElement }: Props): JSX.Element {
   const changeState = (
     event:
       | MouseEvent<HTMLButtonElement>

@@ -1,5 +1,5 @@
-import style from './common.module.css'
 import { HslaStringColorPicker } from 'react-colorful'
+import style from './common.module.css'
 
 export type Props = {
   label: string
@@ -7,7 +7,7 @@ export type Props = {
   initColor: string
 }
 
-export default function ColorPicker({ label, cssVariableName, initColor }: Props) {
+export default function ColorPicker({ cssVariableName, initColor, label }: Props) {
   const setColor = (color: string) => {
     document.documentElement.style.setProperty(cssVariableName, color)
   }

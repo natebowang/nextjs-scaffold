@@ -1,11 +1,11 @@
+import { Intro } from './Intro'
+import { useState } from 'react'
 import ColorPicker from './ColorPicker'
 import Grid from './Grid'
 import Head from 'next/head'
 import Header from './Header'
 import SizeSlider from './SizeSlider'
 import style from './common.module.css'
-import { Intro } from './Intro'
-import { useState } from 'react'
 
 export default function HomePage(): JSX.Element {
   const [n, setN] = useState(5)
