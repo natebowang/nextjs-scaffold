@@ -21,6 +21,6 @@ const storeMap: Record<number, Store> = {
   },
 }
 
-export default function mockGenerateStore(n: number): Store {
+export function mockGenerateStore(n: number): Store {
   return storeMap[n]
 }
