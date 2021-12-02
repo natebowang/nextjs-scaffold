@@ -15,7 +15,6 @@ export default function Grid({ n }: Props): JSX.Element {
 
   return (
     <>
-      <h2 className={style.h2}>Grid: </h2>
       <table className={style.table}>
         <tbody>
           {matrix.map((matrixArray: MatrixArray, x: RowIndex) => (

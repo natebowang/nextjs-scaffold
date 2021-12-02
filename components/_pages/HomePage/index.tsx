@@ -19,9 +19,11 @@ export default function HomePage(): JSX.Element {
       <Header />
       <main className={style.main}>
         <section>
+          <h2 className={style.h2}>Grid: </h2>
           <Grid n={n} key={n} />
         </section>
         <section>
+          <h2 className={style.h2}>Grid Controls: </h2>
           <SizeSlider n={n} setN={setN} />
           <ColorPicker
             label="Background Colour"

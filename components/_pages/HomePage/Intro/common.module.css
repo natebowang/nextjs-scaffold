@@ -8,3 +8,8 @@
 .article > p > a:hover {
   text-decoration: underline;
 }
+
+.h2 {
+  font-size: 2.4rem;
+  margin-bottom: var(--space1);
+}

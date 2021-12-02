@@ -3,6 +3,7 @@ import style from './common.module.css'
 export function Intro(): JSX.Element {
   return (
     <article className={style.article}>
+      <h2 className={style.h2}>Intro: </h2>
       <p>Hi,</p>
       <p>
         Thank you for your time reviewing this{' '}
