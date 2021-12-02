@@ -1,5 +1,5 @@
-import mocked from './Grid/generateStore/mocked'
-jest.mock('./Grid/generateStore', () => jest.fn(mocked))
+import mock from './Grid/generateStore/mock'
+jest.mock('./Grid/generateStore', () => jest.fn(mock))
 
 import { render, screen } from '@testing-library/react'
 import HomePage from './index'
