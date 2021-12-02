@@ -9,7 +9,7 @@ module.exports = {
     '@storybook/addon-essentials',
   ],
   core: {
-    builder: "webpack5",
+    builder: 'webpack5',
   },
   stories: ['../components/**/*.story.tsx'],
   webpackFinal: (config) => {
