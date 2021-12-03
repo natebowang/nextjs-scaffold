@@ -1,5 +1,5 @@
 import mock, { mockMatrix5 } from '../Grid/generateStore/index.mock'
-jest.mock('./Grid/generateStore', () => jest.fn(mock))
+jest.mock('../Grid/generateStore', () => jest.fn(mock))
 
 import { ElementState, FlattenedMatrix, Matrix, MatrixElement } from '../Grid/_types'
 import { GITHUB_REPO } from '../_constants'
