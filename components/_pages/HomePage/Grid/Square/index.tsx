@@ -35,7 +35,11 @@ export default memo(function Square({ count, dispatch, index, matrixElement }: P
   }
 
   const squareMap: Record<MatrixElement, ReactNode> = {
-    [EMPTY]: <div className={style.empty}>&nbsp;</div>,
+    [EMPTY]: (
+      <div aria-label="empty square" className={style.empty}>
+        &nbsp;
+      </div>
+    ),
     [FILLED]: (
       <button
         aria-label="filled square"

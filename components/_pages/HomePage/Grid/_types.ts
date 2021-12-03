@@ -7,6 +7,7 @@ export enum ElementState {
   CONNECTED_WITH_COUNT = 4,
 }
 export type MatrixArray = MatrixElement[]
+export type FlattenedMatrix = MatrixElement[]
 export type Matrix = MatrixArray[]
 
 export type RowIndex = number

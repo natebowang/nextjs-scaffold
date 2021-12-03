@@ -21,7 +21,7 @@
     "test": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:local": "jest --silent",
-    "test:e2e": "playwright test e2etests/"
+    "test:e2e": "playwright test e2eTests/"
   },
   "dependencies": {
     "next": "12.0.4",

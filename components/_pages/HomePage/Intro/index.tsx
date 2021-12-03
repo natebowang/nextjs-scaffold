@@ -1,3 +1,4 @@
+import { GITHUB_REPO } from '../_constants'
 import style from './common.module.css'
 
 export function Intro(): JSX.Element {
@@ -6,8 +7,7 @@ export function Intro(): JSX.Element {
       <h2 className={style.h2}>Intro: </h2>
       <p>Hi,</p>
       <p>
-        Thank you for your time reviewing this{' '}
-        <a href="https://github.com/auvmacintosh/ava-test">project</a>. <br />
+        Thank you for your time reviewing this <a href={GITHUB_REPO}>project</a>. <br />
         On top of all the features listed in the document, this project also accomplished the
         following task:
         <br />
