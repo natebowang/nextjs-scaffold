@@ -1,4 +1,3 @@
-import { BLUR, CLICK, FOCUS, KEY_DOWN, MOUSE_ENTER, MOUSE_LEAVE } from '../../../../../constants'
 import changeColor from './changeColor'
 import deepClone from './deepClone'
 import displayCount from './displayCount'
@@ -15,18 +14,27 @@ export type Action = {
   index: Index
 }
 
+enum DomEvent {
+  MOUSE_ENTER = 'mouseenter',
+  FOCUS = 'focus',
+  MOUSE_LEAVE = 'mouseleave',
+  BLUR = 'blur',
+  CLICK = 'click',
+  KEY_DOWN = 'keydown',
+}
+
 export default function reducer({ count, matrix }: Store, { index, type }: Action): Store {
   const clonedMatrix = deepClone(matrix)
 
   switch (type) {
-    case MOUSE_ENTER.toLowerCase():
-    case FOCUS:
+    case DomEvent.MOUSE_ENTER:
+    case DomEvent.FOCUS:
       return changeColor(clonedMatrix, count, index)
-    case MOUSE_LEAVE.toLowerCase():
-    case BLUR:
+    case DomEvent.MOUSE_LEAVE:
+    case DomEvent.BLUR:
       return { matrix: resetColor(clonedMatrix), count }
-    case CLICK:
-    case KEY_DOWN.toLowerCase():
+    case DomEvent.CLICK:
+    case DomEvent.KEY_DOWN:
       return { matrix: displayCount(clonedMatrix, index), count }
     default:
       return { matrix: clonedMatrix, count }

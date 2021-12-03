@@ -6,6 +6,7 @@ import { GridEvent, gridEvents5 } from './gridEvents'
 import { fireEvent, render, screen } from '@testing-library/react'
 import HomePage from '../index'
 import matchMatrixElement from './matchMatrixElement'
+import userEvent from '@testing-library/user-event'
 
 test('render the page', () => {
   render(<HomePage />)

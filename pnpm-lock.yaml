@@ -19,6 +19,7 @@ specifiers:
   '@testing-library/dom': ^8.11.1
   '@testing-library/jest-dom': 5.15.1
   '@testing-library/react': 12.1.2
+  '@testing-library/user-event': ^13.5.0
   '@types/ramda': 0.27.50
   '@types/react': 17.0.36
   '@types/react-dom': 17.0.11
@@ -83,6 +84,7 @@ devDependencies:
   '@testing-library/dom': 8.11.1
   '@testing-library/jest-dom': 5.15.1
   '@testing-library/react': 12.1.2_react-dom@17.0.2+react@17.0.2
+  '@testing-library/user-event': 13.5.0_@testing-library+dom@8.11.1
   '@types/ramda': 0.27.50
   '@types/react': 17.0.36
   '@types/react-dom': 17.0.11
@@ -4332,6 +4334,16 @@ packages:
       '@testing-library/dom': 8.11.1
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
+    dev: true
+
+  /@testing-library/user-event/13.5.0_@testing-library+dom@8.11.1:
+    resolution: {integrity: sha512-5Kwtbo3Y/NowpkbRuSepbyMFkZmHgD+vPzYB/RJ4oxt5Gj/avFFBYjhw27cqSVPVw/3a67NK1PbiIr9k4Gwmdg==}
+    engines: {node: '>=10', npm: '>=6'}
+    peerDependencies:
+      '@testing-library/dom': '>=7.21.4'
+    dependencies:
+      '@babel/runtime': 7.16.3
+      '@testing-library/dom': 8.11.1
     dev: true
 
   /@tootallnate/once/1.1.2:

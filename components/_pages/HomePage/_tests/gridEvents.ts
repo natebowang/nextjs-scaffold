@@ -1,4 +1,3 @@
-import { CLICK, MOUSE_ENTER, MOUSE_LEAVE } from '../../../../constants'
 import type { EventType } from '@testing-library/dom'
 import type { Index, Matrix } from '../Grid/_types'
 
@@ -11,7 +10,7 @@ export type GridEvent = {
 // TODO: add keyboard events
 export const gridEvents5: GridEvent[] = [
   {
-    type: MOUSE_ENTER,
+    type: 'mouseEnter',
     index: { x: 0, y: 4 },
     newMatrix: [
       [0, 0, 0, 0, 3],
@@ -22,7 +21,7 @@ export const gridEvents5: GridEvent[] = [
     ],
   },
   {
-    type: CLICK,
+    type: 'click',
     index: { x: 0, y: 4 },
     newMatrix: [
       [0, 0, 0, 0, 4],
@@ -33,7 +32,7 @@ export const gridEvents5: GridEvent[] = [
     ],
   },
   {
-    type: MOUSE_LEAVE,
+    type: 'mouseLeave',
     index: { x: 0, y: 4 },
     newMatrix: [
       [0, 0, 0, 0, 2],
@@ -44,7 +43,7 @@ export const gridEvents5: GridEvent[] = [
     ],
   },
   {
-    type: MOUSE_ENTER,
+    type: 'mouseEnter',
     index: { x: 1, y: 1 },
     newMatrix: [
       [0, 0, 0, 0, 2],
@@ -55,7 +54,7 @@ export const gridEvents5: GridEvent[] = [
     ],
   },
   {
-    type: CLICK,
+    type: 'click',
     index: { x: 1, y: 1 },
     newMatrix: [
       [0, 0, 0, 0, 1],
@@ -66,7 +65,7 @@ export const gridEvents5: GridEvent[] = [
     ],
   },
   {
-    type: MOUSE_LEAVE,
+    type: 'mouseLeave',
     index: { x: 1, y: 1 },
     newMatrix: [
       [0, 0, 0, 0, 1],
