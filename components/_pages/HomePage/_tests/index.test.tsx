@@ -37,3 +37,6 @@ test('operate the grid', () => {
     squares.forEach(matchMatrixElement(newMatrix))
   })
 })
+
+// TODO: complete the following test
+test('operate the size picker', () => {})
