@@ -8,6 +8,7 @@ export type GridEvent = {
   newMatrix: Matrix
 }
 
+// TODO: add keyboard events
 export const gridEvents5: GridEvent[] = [
   {
     type: MOUSE_ENTER,
