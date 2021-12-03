@@ -44,6 +44,7 @@ specifiers:
   react: 17.0.2
   react-colorful: 5.5.1
   react-dom: 17.0.2
+  sass: ^1.44.0
   storybook-addon-pseudo-states: 1.0.0
   stylelint: 14.1.0
   stylelint-config-css-modules: 2.3.0
@@ -56,7 +57,7 @@ specifiers:
   webpack-bundle-analyzer: 4.5.0
 
 dependencies:
-  next: 12.0.4_aae888dfa296766acacf1a733aa50b3a
+  next: 12.0.4_1d7f8e1fb04b1afbea74a03df688c531
   react: 17.0.2
   react-colorful: 5.5.1_react-dom@17.0.2+react@17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -102,6 +103,7 @@ devDependencies:
   jest: 27.3.1_ts-node@10.4.0
   prettier: 2.4.1
   ramda: 0.27.1
+  sass: 1.44.0
   storybook-addon-pseudo-states: 1.0.0_react-dom@17.0.2+react@17.0.2
   stylelint: 14.1.0
   stylelint-config-css-modules: 2.3.0_stylelint@14.1.0
@@ -7528,7 +7530,7 @@ packages:
       eslint-plugin-jsx-a11y: 6.5.1_eslint@7.32.0
       eslint-plugin-react: 7.27.1_eslint@7.32.0
       eslint-plugin-react-hooks: 4.3.0_eslint@7.32.0
-      next: 12.0.4_aae888dfa296766acacf1a733aa50b3a
+      next: 12.0.4_1d7f8e1fb04b1afbea74a03df688c531
       typescript: 4.5.2
     transitivePeerDependencies:
       - supports-color
@@ -9147,6 +9149,10 @@ packages:
 
   /immer/8.0.1:
     resolution: {integrity: sha512-aqXhGP7//Gui2+UrEtvxZxSquQVXTpZ7KDxfCcKAF3Vysvw0CViVaW9RZ1j1xlIYqaaaipBoqdqeibkc18PNvA==}
+    dev: true
+
+  /immutable/4.0.0:
+    resolution: {integrity: sha512-zIE9hX70qew5qTUjSS7wi1iwj/l7+m54KWU247nhM3v806UdGj1yDndXj+IOYxxtW9zyLI+xqFNZjTuDaLUqFw==}
     dev: true
 
   /import-fresh/3.3.0:
@@ -11128,7 +11134,7 @@ packages:
     resolution: {integrity: sha512-AO81vsIO1k1sM4Zrd6Hu7regmJN1NSiAja10gc4bX3F0wd+9rQmcuHQaHVQCYIEC8iFXnE+mavh23GOt7wBgug==}
     dev: true
 
-  /next/12.0.4_aae888dfa296766acacf1a733aa50b3a:
+  /next/12.0.4_1d7f8e1fb04b1afbea74a03df688c531:
     resolution: {integrity: sha512-1pvjcSZBm5OLoGmDhp4JwKwIE798WbqUNLuyU7w6a2jUkdWaxOYtkE/ROXQTi2pXHj7+6rm68AvhxROLX2NHQg==}
     engines: {node: '>=12.22.0'}
     hasBin: true
@@ -11187,6 +11193,7 @@ packages:
       react-is: 17.0.2
       react-refresh: 0.8.3
       regenerator-runtime: 0.13.4
+      sass: 1.44.0
       stream-browserify: 3.0.0
       stream-http: 3.1.1
       string_decoder: 1.3.0
@@ -13031,6 +13038,15 @@ packages:
       micromatch: 3.1.10
       minimist: 1.2.5
       walker: 1.0.8
+    dev: true
+
+  /sass/1.44.0:
+    resolution: {integrity: sha512-0hLREbHFXGQqls/K8X+koeP+ogFRPF4ZqetVB19b7Cst9Er8cOR0rc6RU7MaI4W1JmUShd1BPgPoeqmmgMMYFw==}
+    engines: {node: '>=8.9.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.2
+      immutable: 4.0.0
     dev: true
 
   /saxes/5.0.1:
