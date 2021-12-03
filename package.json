@@ -46,6 +46,7 @@
     "@storybook/builder-webpack5": "6.3.12",
     "@storybook/manager-webpack5": "6.3.12",
     "@storybook/react": "6.3.12",
+    "@testing-library/dom": "^8.11.1",
     "@testing-library/jest-dom": "5.15.1",
     "@testing-library/react": "12.1.2",
     "@types/ramda": "0.27.50",

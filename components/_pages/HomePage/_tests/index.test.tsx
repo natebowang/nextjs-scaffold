@@ -1,7 +1,8 @@
 import mock, { mockMatrix5 } from '../Grid/generateStore/index.mock'
 jest.mock('../Grid/generateStore', () => jest.fn(mock))
 
-import { ElementState, FlattenedMatrix, Matrix, MatrixElement } from '../Grid/_types'
+import { ElementState, Matrix, MatrixElement } from '../Grid/_types'
+import { EventDetails, gridEvents5 } from './gridEvents'
 import { GITHUB_REPO } from '../_constants'
 import { fireEvent, render, screen } from '@testing-library/react'
 import HomePage from '../index'
@@ -21,76 +22,20 @@ test('render the headers', () => {
   expect(introHeader).toBeVisible()
 })
 
-const { CONNECTED, CONNECTED_WITH_COUNT, EMPTY, FILLED, FILLED_WITH_COUNT } = ElementState
-const flattenedMatrix5 = mockMatrix5.flat()
 const accessibleNameMap: Record<MatrixElement, RegExp> = {
-  [EMPTY]: /empty square/i,
-  [FILLED]: /filled square$/i,
-  [FILLED_WITH_COUNT]: /filled square with count/i,
-  [CONNECTED]: /connected square$/i,
-  [CONNECTED_WITH_COUNT]: /connected square with count/i,
+  [ElementState.EMPTY]: /empty square/i,
+  [ElementState.FILLED]: /filled square$/i,
+  [ElementState.FILLED_WITH_COUNT]: /filled square with count/i,
+  [ElementState.CONNECTED]: /connected square$/i,
+  [ElementState.CONNECTED_WITH_COUNT]: /connected square with count/i,
 }
-const matchMatrixElement =
-  (flattenedMatrix: MatrixElement[]) => (square: HTMLElement, i: number) => {
+
+const matchMatrixElement = (matrix: Matrix) => {
+  const flattenedMatrix = matrix.flat()
+  return (square: HTMLElement, i: number) => {
     expect(square).toHaveAccessibleName(accessibleNameMap[flattenedMatrix[i]])
   }
-
-export function* generator(): Generator<Record<string, FlattenedMatrix>> {
-  const mouseEnter04Matrix: Matrix = [
-    [0, 0, 0, 0, 3],
-    [1, 1, 0, 0, 0],
-    [1, 1, 0, 1, 1],
-    [0, 0, 0, 0, 0],
-    [1, 1, 1, 0, 0],
-  ]
-
-  yield {
-    mouseEnter4: mouseEnter04Matrix.flat(),
-  }
-
-  const click04Matrix: Matrix = [
-    [0, 0, 0, 0, 4],
-    [1, 1, 0, 0, 0],
-    [1, 1, 0, 1, 1],
-    [0, 0, 0, 0, 0],
-    [1, 1, 1, 0, 0],
-  ]
-
-  yield {
-    click4: click04Matrix.flat(),
-  }
 }
-
-// clickAndLeave04: [
-//   [0, 0, 0, 0, 2],
-//   [1, 1, 0, 0, 0],
-//   [1, 1, 0, 1, 1],
-//   [0, 0, 0, 0, 0],
-//   [1, 1, 1, 0, 0],
-// ],
-// hover11: [
-//   [0, 0, 0, 0, 2],
-//   [3, 3, 0, 0, 0],
-//   [3, 3, 0, 1, 1],
-//   [0, 0, 0, 0, 0],
-//   [1, 1, 1, 0, 0],
-// ],
-// click11: [
-//   [0, 0, 0, 0, 1],
-//   [3, 4, 0, 0, 0],
-//   [3, 3, 0, 1, 1],
-//   [0, 0, 0, 0, 0],
-//   [1, 1, 1, 0, 0],
-// ],
-// clickAndLeave11: [
-//   [0, 0, 0, 0, 1],
-//   [1, 2, 0, 0, 0],
-//   [1, 1, 0, 1, 1],
-//   [0, 0, 0, 0, 0],
-//   [1, 1, 1, 0, 0],
-// ],
-
-const i = generator()
 
 test('render the table', () => {
   render(<HomePage />)
@@ -98,23 +43,11 @@ test('render the table', () => {
   expect(grid).toBeVisible()
 
   const squares = screen.getAllByLabelText(/square/i)
-  squares.forEach(matchMatrixElement(flattenedMatrix5))
+  squares.forEach(matchMatrixElement(mockMatrix5))
 
-  fireEvent.mouseEnter(squares[4])
-  squares.forEach(matchMatrixElement(i.next().value.mouseEnter4))
-
-  fireEvent.click(squares[4])
-  squares.forEach(matchMatrixElement(i.next().value.click4))
-
-  // fireEvent.mouseLeave(squares[4])
-  // squares.forEach(matchMatrixElement(flattenedMatrix5ClickAndLeave04))
-  //
-  // fireEvent.mouseEnter(squares[6])
-  // squares.forEach(matchMatrixElement(flattenedMatrix5Hover11))
-  //
-  // fireEvent.click(squares[6])
-  // squares.forEach(matchMatrixElement(flattenedMatrix5Click11))
-  //
-  // fireEvent.mouseLeave(squares[6])
-  // squares.forEach(matchMatrixElement(flattenedMatrix5ClickAndLeave11))
+  gridEvents5.eventsDetails.forEach(({ index, newMatrix, type }: EventDetails) => {
+    const arrayIndex = gridEvents5.n * index.x + index.y
+    fireEvent[type](squares[arrayIndex])
+    squares.forEach(matchMatrixElement(newMatrix))
+  })
 })

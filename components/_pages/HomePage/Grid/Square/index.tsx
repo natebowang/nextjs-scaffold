@@ -25,6 +25,7 @@ export default memo(function Square({ count, dispatch, index, matrixElement }: P
       | KeyboardEvent<HTMLButtonElement>,
   ) => {
     const { type } = event
+
     if (!Object.prototype.hasOwnProperty.call(event, 'key')) {
       // Mouse event or focus event
       dispatch({ type, index })
