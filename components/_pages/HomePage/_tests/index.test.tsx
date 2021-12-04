@@ -3,7 +3,7 @@ jest.mock('../Grid/generateStore', () => jest.fn(mock))
 
 import { GITHUB_REPO } from '../_constants'
 import { GridEvent, gridEvents5 } from './gridEvents'
-import { fireEvent, render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import HomePage from '../index'
 import matchMatrixElement from './matchMatrixElement'
 import userEvent from '@testing-library/user-event'
@@ -34,7 +34,7 @@ test('operate the grid', () => {
 
   gridEvents5.forEach(({ index, newMatrix, type }: GridEvent) => {
     const arrayIndex = index.x * 5 + index.y
-    fireEvent[type](squares[arrayIndex])
+    userEvent[type](squares[arrayIndex])
     squares.forEach(matchMatrixElement(newMatrix))
   })
 })

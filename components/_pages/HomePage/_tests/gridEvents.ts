@@ -1,8 +1,7 @@
-import type { EventType } from '@testing-library/dom'
 import type { Index, Matrix } from '../Grid/_types'
 
 export type GridEvent = {
-  type: EventType
+  type: 'hover' | 'unhover' | 'click'
   index: Index
   newMatrix: Matrix
 }
@@ -10,7 +9,7 @@ export type GridEvent = {
 // TODO: add keyboard events
 export const gridEvents5: GridEvent[] = [
   {
-    type: 'mouseEnter',
+    type: 'hover',
     index: { x: 0, y: 4 },
     newMatrix: [
       [0, 0, 0, 0, 3],
@@ -32,7 +31,7 @@ export const gridEvents5: GridEvent[] = [
     ],
   },
   {
-    type: 'mouseLeave',
+    type: 'unhover',
     index: { x: 0, y: 4 },
     newMatrix: [
       [0, 0, 0, 0, 2],
@@ -43,7 +42,7 @@ export const gridEvents5: GridEvent[] = [
     ],
   },
   {
-    type: 'mouseEnter',
+    type: 'hover',
     index: { x: 1, y: 1 },
     newMatrix: [
       [0, 0, 0, 0, 2],
@@ -65,7 +64,7 @@ export const gridEvents5: GridEvent[] = [
     ],
   },
   {
-    type: 'mouseLeave',
+    type: 'unhover',
     index: { x: 1, y: 1 },
     newMatrix: [
       [0, 0, 0, 0, 1],
