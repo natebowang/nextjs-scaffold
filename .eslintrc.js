@@ -43,6 +43,7 @@ module.exports = {
     'sort-destructure-keys',
     'sort-imports-es6-autofix',
     'import',
+    'jsx-a11y',
     'react',
     'react-hooks',
   ],

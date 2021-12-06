@@ -20,16 +20,16 @@ function areEqual(prevProps: Props, nextProps: Props) {
 export default memo(function Square({ count, dispatch, index, matrixElement }: Props): JSX.Element {
   const changeState = (
     event:
-      | MouseEvent<HTMLButtonElement>
-      | FocusEvent<HTMLButtonElement>
-      | KeyboardEvent<HTMLButtonElement>,
+      | MouseEvent<HTMLTableCellElement>
+      | FocusEvent<HTMLTableCellElement>
+      | KeyboardEvent<HTMLTableCellElement>,
   ) => {
     const { type } = event
 
     if (!Object.prototype.hasOwnProperty.call(event, 'key')) {
       // Mouse event or focus event
       dispatch({ type, index })
-    } else if ((event as KeyboardEvent<HTMLButtonElement>).key === 'Enter') {
+    } else if ((event as KeyboardEvent<HTMLTableCellElement>).key === 'Enter') {
       // Keyboard event of pressing enter
       dispatch({ type, index })
     }
@@ -37,59 +37,63 @@ export default memo(function Square({ count, dispatch, index, matrixElement }: P
 
   const squareMap: Record<MatrixElement, ReactNode> = {
     [EMPTY]: (
-      <div aria-label="empty square" className={style.empty}>
+      <td aria-label="empty square" className={[style.td, style.empty].join(' ')} role="gridcell">
         &nbsp;
-      </div>
+      </td>
     ),
     [FILLED]: (
-      <button
+      <td
         aria-label="filled square"
-        className={style.filled}
-        onMouseEnter={changeState}
+        className={[style.td, style.filled].join(' ')}
         onFocus={changeState}
+        onMouseEnter={changeState}
+        role="gridcell"
       >
         &nbsp;
-      </button>
+      </td>
     ),
     [FILLED_WITH_COUNT]: (
-      <button
+      <td
         aria-label="filled square with count"
-        className={style.filled}
-        onMouseEnter={changeState}
+        className={[style.td, style.filled].join(' ')}
         onFocus={changeState}
+        onMouseEnter={changeState}
+        role="gridcell"
       >
         {count}
-      </button>
+      </td>
     ),
     [CONNECTED]: (
-      <button
+      <td
         aria-label="connected square"
-        className={style.connected}
-        onMouseEnter={changeState}
-        onFocus={changeState}
-        onMouseLeave={changeState}
+        className={[style.td, style.connected].join(' ')}
         onBlur={changeState}
         onClick={changeState}
+        onFocus={changeState}
         onKeyDown={changeState}
+        onMouseEnter={changeState}
+        onMouseLeave={changeState}
+        role="gridcell"
       >
         &nbsp;
-      </button>
+      </td>
     ),
     [CONNECTED_WITH_COUNT]: (
-      <button
+      <td
         aria-label="connected square with count"
-        className={style.connected}
-        onMouseEnter={changeState}
-        onFocus={changeState}
-        onMouseLeave={changeState}
+        className={[style.td, style.connected].join(' ')}
         onBlur={changeState}
         onClick={changeState}
+        onFocus={changeState}
         onKeyDown={changeState}
+        onMouseEnter={changeState}
+        onMouseLeave={changeState}
+        role="gridcell"
       >
         {count}
-      </button>
+      </td>
     ),
   }
 
-  return <td className={style.td}>{squareMap[matrixElement]}</td>
+  return <>{squareMap[matrixElement]}</>
 }, areEqual)

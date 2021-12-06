@@ -24,6 +24,7 @@
     "test:e2e": "playwright test e2eTests/"
   },
   "dependencies": {
+    "jest-axe": "^5.0.1",
     "next": "12.0.4",
     "react": "17.0.2",
     "react-colorful": "5.5.1",
@@ -50,6 +51,7 @@
     "@testing-library/jest-dom": "5.15.1",
     "@testing-library/react": "12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "@types/jest-axe": "^3.5.3",
     "@types/ramda": "0.27.50",
     "@types/react": "17.0.36",
     "@types/react-dom": "17.0.11",

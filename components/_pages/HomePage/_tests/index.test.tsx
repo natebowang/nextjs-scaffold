@@ -3,10 +3,13 @@ jest.mock('../Grid/generateStore', () => jest.fn(mock))
 
 import { GITHUB_REPO } from '../_constants'
 import { GridEvent, gridEvents5 } from './gridEvents'
+import { axe, toHaveNoViolations } from 'jest-axe'
 import { render, screen } from '@testing-library/react'
 import HomePage from '../index'
 import matchMatrixElement from './matchMatrixElement'
 import userEvent from '@testing-library/user-event'
+
+expect.extend(toHaveNoViolations)
 
 test('render the page', () => {
   render(<HomePage />)
@@ -26,8 +29,11 @@ test('render the page', () => {
   expect(introHeader).toBeVisible()
 })
 
-test('operate the grid', () => {
-  render(<HomePage />)
+test('operate the grid', async () => {
+  const { container } = render(<HomePage />)
+  // screen.debug()
+  // const results = await axe(container)
+  // expect(results).toHaveNoViolations()
 
   const squares = screen.getAllByLabelText(/square/i)
   squares.forEach(matchMatrixElement(mockMatrix5))
