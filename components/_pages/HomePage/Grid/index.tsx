@@ -12,6 +12,7 @@ export type Props = {
 
 export default function Grid({ n }: Props): JSX.Element {
   const [{ count, matrix }, dispatch] = useReducer(reducer, n, generateStore)
+  console.log(matrix)
 
   return (
     <>

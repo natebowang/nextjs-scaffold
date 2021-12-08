@@ -1,4 +1,5 @@
 import { Intro } from './Intro'
+import { initialN } from './Grid/generateStore'
 import { useState } from 'react'
 import ColorPicker from './ColorPicker'
 import Grid from './Grid'
@@ -8,7 +9,7 @@ import SizeSlider from './SizeSlider'
 import style from './common.module.css'
 
 export default function HomePage(): JSX.Element {
-  const [n, setN] = useState(5)
+  const [n, setN] = useState(initialN)
 
   return (
     <>
