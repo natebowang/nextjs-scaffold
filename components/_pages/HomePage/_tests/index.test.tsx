@@ -19,7 +19,7 @@ test('render the page', () => {
   const gridHeader = screen.getByText(/grid:/i)
   expect(gridHeader).toBeVisible()
 
-  const grid = screen.getByRole('table')
+  const grid = screen.getByRole('grid')
   expect(grid).toBeVisible()
 
   const gridControlsHeader = screen.getByText(/grid controls:/i)

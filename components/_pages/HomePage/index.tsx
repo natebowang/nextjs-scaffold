@@ -1,5 +1,5 @@
 import { Intro } from './Intro'
-import { initialN } from './Grid/generateStore'
+import { initialN } from './Grid/generateStore/_constants'
 import { useState } from 'react'
 import ColorPicker from './ColorPicker'
 import Grid from './Grid'
