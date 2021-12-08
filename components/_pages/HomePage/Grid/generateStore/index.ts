@@ -1,8 +1,9 @@
+import generatePseudoRandomNumber from './mulBerry32Prng'
 import type { Matrix, MatrixElement } from '../_types'
 import type { Store } from '../reducer'
 
 function generateElement(): MatrixElement {
-  return Math.round(Math.random()) as MatrixElement
+  return Math.round(generatePseudoRandomNumber()) as MatrixElement
 }
 
 function generateMatrix(xN: number, yN: number): Matrix {
