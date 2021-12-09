@@ -3,13 +3,11 @@ jest.mock('../Grid/generateStore', () => jest.fn(mock))
 
 import { GITHUB_REPO } from '../_constants'
 import { GridEvent, gridEvents5 } from './gridEvents'
-import { axe, toHaveNoViolations } from 'jest-axe'
+import { axe } from 'jest-axe'
 import { render, screen } from '@testing-library/react'
 import HomePage from '../index'
 import matchMatrixElement from './matchMatrixElement'
 import userEvent from '@testing-library/user-event'
-
-expect.extend(toHaveNoViolations)
 
 test('render the page', () => {
   render(<HomePage />)
