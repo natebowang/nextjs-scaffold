@@ -1,6 +1,9 @@
-This is a [Next.js](https://nextjs.org/) scaffold.
+# NextJS Scaffold
 
-# Run the development server:
+This is my frontend demo using NextJs, React, Typescript, Storybook, Jest, Playwright, etc.
+I'm also using this project as a [Next.js](https://nextjs.org/) scaffold for my future frontend projects.
+
+## Run the development server:
 
 ```bash
 pnpm dev
@@ -11,7 +14,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the
 file.
 
-# Run the production server
+## Run the production server
 
 ```bash
 pnpm build
@@ -20,21 +23,21 @@ pnpm start
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-# Jest unit tests and integration tests
+## Jest unit tests and integration tests
 
 ```bash
 pnpm test # jest --watch 
 pnpm test:coverage # jest --coverage
 ```
 
-# Playwright e2e tests
+## Playwright e2e tests
 
 ```bash
 pnpx playwright install # install supported browsers
 pnpm dev && pnpm test:e2e # start a server on localhost:3000 first
 ```
 
-# StoryBook
+## StoryBook
 
 ```bash
 pnpm storybook
