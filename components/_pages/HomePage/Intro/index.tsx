@@ -5,10 +5,7 @@ export function Intro(): JSX.Element {
     <article className={style.article}>
       <p>Hi,</p>
       <p>
-        Thank you for your time reviewing this{' '}
-        <a href="https://github.com/auvmacintosh/ava-test">project</a>. <br />
-        On top of all the features listed in the document, this project also accomplished the
-        following task:
+        Here are some highlights of this project:
         <br />
         1. Performance: using React.memo to avoid unnecessary renders, SSG pre-render pages.
         <br />
