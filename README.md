@@ -1,5 +1,7 @@
 # NextJS Scaffold
 
+__[Live Demo](https://nextjs-scaffold-git-production-natebowang.vercel.app/)__
+
 This is my frontend demo using NextJs, React, Typescript, Storybook, Jest, Playwright, etc.
 I'm also using this project as a [Next.js](https://nextjs.org/) scaffold for my future frontend projects.
 
